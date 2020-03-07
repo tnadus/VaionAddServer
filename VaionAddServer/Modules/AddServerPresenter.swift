@@ -8,10 +8,20 @@
 
 import Foundation
 
+protocol AddServerViewProtocol: class {
+    func updateView()
+}
+
 protocol AddServerPresenterProtocol {
     
 }
 
 class AddServerPresenter: AddServerPresenterProtocol {
+    
+    weak var managedView: AddServerViewProtocol?
+    
+    func start() {
+        managedView?.updateView()
+    }
     
 }
