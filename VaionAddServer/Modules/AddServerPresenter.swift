@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AddServerViewProtocol: class {
-    func updateView()
+    func updateView(placeholder: String, buttonTitle: String)
 }
 
 protocol AddServerPresenterProtocol {
@@ -21,7 +21,7 @@ class AddServerPresenter: AddServerPresenterProtocol {
     weak var managedView: AddServerViewProtocol?
     
     func start() {
-        managedView?.updateView()
+        managedView?.updateView(placeholder: "IP Address", buttonTitle: "OK")
     }
     
 }

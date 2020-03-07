@@ -18,13 +18,14 @@ class AddServerPresenterTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
-    func test_start_withOnViewDidLoad_updatesView() {
+        
+    func test_start_withOnViewDidLoad_updatesViewPlaceholderAndButtonTitle() {
         let managedView = AddServerViewControllerMock()
         let sut = AddServerPresenter()
         sut.managedView = managedView
         sut.start()
-        XCTAssertEqual(managedView.updateViewCalledFlag, true)
+        XCTAssertEqual(managedView.placeholder, "IP Address")
+        XCTAssertEqual(managedView.buttonTitle, "OK")
     }
 
 }
@@ -34,12 +35,13 @@ extension AddServerPresenterTests {
     
     class AddServerViewControllerMock: AddServerViewProtocol {
         
-        var updateViewCalledFlag: Bool = false
+        var placeholder: String = ""
+        var buttonTitle: String = ""
         
-        func updateView() {
-            updateViewCalledFlag = true
+        func updateView(placeholder: String, buttonTitle: String) {
+            self.placeholder = placeholder
+            self.buttonTitle = buttonTitle
         }
-        
     }
     
 }
