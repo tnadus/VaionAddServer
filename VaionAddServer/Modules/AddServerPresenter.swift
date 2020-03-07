@@ -15,7 +15,7 @@ protocol AddServerViewProtocol: class {
 }
 
 protocol AddServerPresenterProtocol {
-    
+    func start()
 }
 
 protocol AddServerPresenterNavigatorProtocol {

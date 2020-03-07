@@ -19,6 +19,7 @@
 		639FE05524132D1F0018E6F7 /* ModuleFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE05424132D1F0018E6F7 /* ModuleFactoryTests.swift */; };
 		639FE05924132E110018E6F7 /* AddServerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE05824132E110018E6F7 /* AddServerPresenterTests.swift */; };
 		639FE05B2413970B0018E6F7 /* AddServerUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE05A2413970B0018E6F7 /* AddServerUsecase.swift */; };
+		639FE05F2413FC6D0018E6F7 /* AddServerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE05E2413FC6D0018E6F7 /* AddServerViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		639FE05424132D1F0018E6F7 /* ModuleFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryTests.swift; sourceTree = "<group>"; };
 		639FE05824132E110018E6F7 /* AddServerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerPresenterTests.swift; sourceTree = "<group>"; };
 		639FE05A2413970B0018E6F7 /* AddServerUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerUsecase.swift; sourceTree = "<group>"; };
+		639FE05E2413FC6D0018E6F7 /* AddServerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				639FE034241325D80018E6F7 /* Info.plist */,
 				639FE05424132D1F0018E6F7 /* ModuleFactoryTests.swift */,
 				639FE05824132E110018E6F7 /* AddServerPresenterTests.swift */,
+				639FE05E2413FC6D0018E6F7 /* AddServerViewControllerTests.swift */,
 			);
 			path = VaionAddServerTests;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639FE05F2413FC6D0018E6F7 /* AddServerViewControllerTests.swift in Sources */,
 				639FE05524132D1F0018E6F7 /* ModuleFactoryTests.swift in Sources */,
 				639FE05924132E110018E6F7 /* AddServerPresenterTests.swift in Sources */,
 			);

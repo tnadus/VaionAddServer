@@ -10,6 +10,11 @@ import UIKit
 
 class AddServerViewController: UIViewController {
     
+    //IBOutlets
+    @IBOutlet weak var textFieldIPAddress: UITextField!
+    @IBOutlet weak var buttonOK: UIButton!
+    
+    //Properties
     private var presenter: AddServerPresenterProtocol
     
     init(presenter: AddServerPresenterProtocol) {
@@ -23,17 +28,38 @@ class AddServerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateSubViews()
+        presenter.start()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func updateSubViews() {
+        textFieldIPAddress.text = ""
+        buttonOK.isEnabled = false
     }
-    */
+    
+    @IBAction func onTextFieldChanged(_ sender: Any) {
+        if let text = textFieldIPAddress.text, text.isEmpty == false {
+            buttonOK.isEnabled = true
+        } else {
+            buttonOK.isEnabled = false
+        }
+    }
+}
 
+extension AddServerViewController: AddServerViewProtocol {
+    
+    func updateView(placeholder: String, buttonTitle: String) {
+        textFieldIPAddress.placeholder = placeholder
+        buttonOK.setTitle(buttonTitle, for: .normal)
+    }
+    
+    func showSpinner() {
+        
+    }
+    
+    func hideSpinner() {
+        
+    }
+    
+    
 }
