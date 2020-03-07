@@ -25,9 +25,18 @@ class AddServerPresenter: AddServerPresenterProtocol {
     }
     
     weak var managedView: AddServerViewProtocol?
+    var addServerUsecase: AddServerUsecaseProtocol
+    
+    init(addServerUsecase: AddServerUsecaseProtocol) {
+        self.addServerUsecase = addServerUsecase
+    }
     
     func start() {
         managedView?.updateView(placeholder: Strings.placeholder, buttonTitle: Strings.buttonTitle)
+    }
+    
+    func onOKButtonTapped() {
+        addServerUsecase.addServer()
     }
     
 }

@@ -12,6 +12,7 @@ import XCTest
 class AddServerPresenterTests: XCTestCase {
     
     let managedView = AddServerViewControllerMock()
+    let addServerUsecase = AddServerUsecaseMock()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,13 +28,22 @@ class AddServerPresenterTests: XCTestCase {
         XCTAssertEqual(managedView.placeholder, "IP Address")
         XCTAssertEqual(managedView.buttonTitle, "OK")
     }
+    
+    func test_onOKButtonTapped_callsAddServerOnAddServerUsecase() {
+        
+        let sut = createSUT()
+        sut.start()
+        
+        sut.onOKButtonTapped()
+        XCTAssertEqual(addServerUsecase.addServerFlagCalled, true)
+    }
 }
 
 //MARK: Helpers
 extension AddServerPresenterTests {
     
     func createSUT() -> AddServerPresenter {
-        let sut = AddServerPresenter()
+        let sut = AddServerPresenter(addServerUsecase: addServerUsecase)
         sut.managedView = managedView
         return sut
     }
@@ -47,6 +57,16 @@ extension AddServerPresenterTests {
             self.placeholder = placeholder
             self.buttonTitle = buttonTitle
         }
+    }
+    
+    class AddServerUsecaseMock: AddServerUsecaseProtocol {
+        
+        var addServerFlagCalled = false
+        
+        func addServer() {
+            addServerFlagCalled = true
+        }
+        
     }
     
 }

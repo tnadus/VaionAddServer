@@ -11,8 +11,8 @@ import Foundation
 class ModuleFactory {
     
     func makeAddServerModule() -> (AddServerViewController, AddServerPresenter) {
-        
-        let presenter = AddServerPresenter()
+        let addServerUsecase = AddServerUsecase()
+        let presenter = AddServerPresenter(addServerUsecase: addServerUsecase)
         let vc = AddServerViewController(presenter: presenter)
         return (vc, presenter)
     }
