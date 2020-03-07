@@ -43,7 +43,7 @@ class AddServerPresenterTests: XCTestCase {
         let sut = createSUT()
         sut.start()
         
-        addServerUsecase.noCredentialsNeeded = true
+        addServerUsecase.result = .success
     
         let expect = expectation(description: "onSuccessScreen")
         var onSuccessScreenCalled = false
@@ -61,6 +61,8 @@ class AddServerPresenterTests: XCTestCase {
         let sut = createSUT()
         sut.start()
         
+        addServerUsecase.result = .login
+        
         let expect = expectation(description: "onLoginScreen")
         var onLoginScreenCalled = false
         sut.onLoginScreen = {
@@ -71,6 +73,22 @@ class AddServerPresenterTests: XCTestCase {
         sut.onOKButtonTapped(ipAddress: ipAddressDefault)
         waitForExpectations(timeout: 1.0, handler: nil)
         XCTAssertTrue(onLoginScreenCalled)
+    }
+    
+    func test_onOKButtonTapped_withIPAddress_receivesError() {
+        let sut = createSUT()
+        sut.start()
+        
+        let error = NSError.init(domain: "com.vaion.addserver", code: 999, userInfo: nil)
+        addServerUsecase.result = .error(error)
+        
+        let expect = expectation(description: "onError")
+        sut.onError = { err in
+            expect.fulfill()
+            XCTAssertEqual((err as NSError).domain, "com.vaion.addserver")
+        }
+        sut.onOKButtonTapped(ipAddress: ipAddressDefault)
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
     
 }
@@ -98,12 +116,11 @@ extension AddServerPresenterTests {
     class AddServerUsecaseMock: AddServerUsecaseProtocol {
 
         var ipAddress: String = ""
-        var noCredentialsNeeded = false
+        var result: AddServerUsecase.Result = .success
         
-        func addServer(ipAddress: String, onCompletion: (Bool) -> Void) {
+        func addServer(ipAddress: String, onCompletion: (AddServerUsecase.Result) -> Void) {
             self.ipAddress = ipAddress
-            onCompletion(noCredentialsNeeded)
+            onCompletion(result)
         }
     }
-    
 }
