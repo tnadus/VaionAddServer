@@ -16,6 +16,7 @@ protocol AddServerViewProtocol: class {
 
 protocol AddServerPresenterProtocol {
     func start()
+    func onOKButtonTapped(ipAddress: String)
 }
 
 protocol AddServerPresenterNavigatorProtocol {

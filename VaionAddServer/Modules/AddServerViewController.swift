@@ -44,6 +44,11 @@ class AddServerViewController: UIViewController {
             buttonOK.isEnabled = false
         }
     }
+    
+    @IBAction func onButtonOKTapped(_ sender: Any) {
+        guard let text = textFieldIPAddress.text else { return }
+        presenter.onOKButtonTapped(ipAddress: text)
+    }
 }
 
 extension AddServerViewController: AddServerViewProtocol {

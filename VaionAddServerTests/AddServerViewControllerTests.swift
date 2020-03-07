@@ -46,6 +46,15 @@ class AddServerViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.buttonOK.isEnabled, true)
     }
     
+    func test_OKButtonTapped_callsPresenterButtonTap() {
+        let presenter = AddServerPresenterMock()
+        let sut = AddServerViewController(presenter: presenter)
+        _ = sut.view
+        
+        sut.onButtonOKTapped(sut.buttonOK as Any)
+        XCTAssertEqual(presenter.buttonOKTappedCalledFlag, true)
+    }
+
 }
 
 extension AddServerViewControllerTests {
@@ -53,10 +62,14 @@ extension AddServerViewControllerTests {
     class AddServerPresenterMock: AddServerPresenterProtocol {
         
         var startCalledFlag = false
+        var buttonOKTappedCalledFlag = false
         
         func start() {
             startCalledFlag = true
         }
+        
+        func onOKButtonTapped(ipAddress: String) {
+            buttonOKTappedCalledFlag = true
+        }
     }
-    
 }
