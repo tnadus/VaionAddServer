@@ -57,6 +57,22 @@ class AddServerPresenterTests: XCTestCase {
         XCTAssertTrue(onSuccessScreenCalled)
     }
     
+    func test_onOKButtonTapped_withIPAddressRequiresCredentials_navigatesToLoginScreen() {
+        let sut = createSUT()
+        sut.start()
+        
+        let expect = expectation(description: "onLoginScreen")
+        var onLoginScreenCalled = false
+        sut.onLoginScreen = {
+            expect.fulfill()
+            onLoginScreenCalled = true
+        }
+        
+        sut.onOKButtonTapped(ipAddress: ipAddressDefault)
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertTrue(onLoginScreenCalled)
+    }
+    
 }
 
 //MARK: Helpers
@@ -84,9 +100,9 @@ extension AddServerPresenterTests {
         var ipAddress: String = ""
         var noCredentialsNeeded = false
         
-        func addServer(ipAddress: String, onCompletion: () -> Void) {
+        func addServer(ipAddress: String, onCompletion: (Bool) -> Void) {
             self.ipAddress = ipAddress
-            onCompletion()
+            onCompletion(noCredentialsNeeded)
         }
     }
     

@@ -18,6 +18,7 @@ protocol AddServerPresenterProtocol {
 
 protocol AddServerPresenterNavigatorProtocol {
     var onSuccessScreen: (()-> Void)? { get set }
+    var onLoginScreen: (() -> Void)? { get set }
 }
 
 class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigatorProtocol {
@@ -34,6 +35,7 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     
     //Navigation
     var onSuccessScreen: (()-> Void)?
+    var onLoginScreen: (() -> Void)?
     
     init(addServerUsecase: AddServerUsecaseProtocol) {
         self.addServerUsecase = addServerUsecase
@@ -44,8 +46,12 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     }
     
     func onOKButtonTapped(ipAddress: String) {
-        addServerUsecase.addServer(ipAddress: ipAddress) {
-            onSuccessScreen?()
+        addServerUsecase.addServer(ipAddress: ipAddress) { noCredentialsNeeded in
+            if noCredentialsNeeded {
+                onSuccessScreen?()
+            } else {
+                onLoginScreen?()
+            }
         }
     }
 }
