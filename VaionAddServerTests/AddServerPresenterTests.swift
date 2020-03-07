@@ -13,6 +13,7 @@ class AddServerPresenterTests: XCTestCase {
     
     let managedView = AddServerViewControllerMock()
     let addServerUsecase = AddServerUsecaseMock()
+    let ipAddressDefault = "127.0.0.1"
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -34,12 +35,28 @@ class AddServerPresenterTests: XCTestCase {
         let sut = createSUT()
         sut.start()
         
-        let ipAddress = "127.0.0.1"
-        sut.onOKButtonTapped(ipAddress: ipAddress)
-        XCTAssertEqual(addServerUsecase.ipAddress, ipAddress)
+        sut.onOKButtonTapped(ipAddress: ipAddressDefault)
+        XCTAssertEqual(addServerUsecase.ipAddress, ipAddressDefault)
     }
     
-
+    func test_onOKButtonTapped_withIPAddressDoesNotRequireCredentials_navigatesToResultsScreen() {
+        let sut = createSUT()
+        sut.start()
+        
+        addServerUsecase.noCredentialsNeeded = true
+    
+        let expect = expectation(description: "onSuccessScreen")
+        var onSuccessScreenCalled = false
+        sut.onSuccessScreen = {
+            expect.fulfill()
+            onSuccessScreenCalled = true
+        }
+        
+        sut.onOKButtonTapped(ipAddress: ipAddressDefault)
+        waitForExpectations(timeout: 1.0, handler: nil)
+        XCTAssertTrue(onSuccessScreenCalled)
+    }
+    
 }
 
 //MARK: Helpers
@@ -63,11 +80,13 @@ extension AddServerPresenterTests {
     }
     
     class AddServerUsecaseMock: AddServerUsecaseProtocol {
-        
+
         var ipAddress: String = ""
+        var noCredentialsNeeded = false
         
-        func addServer(ipAddress: String) {
+        func addServer(ipAddress: String, onCompletion: () -> Void) {
             self.ipAddress = ipAddress
+            onCompletion()
         }
     }
     

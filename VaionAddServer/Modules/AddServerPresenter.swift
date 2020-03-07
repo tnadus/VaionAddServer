@@ -16,7 +16,11 @@ protocol AddServerPresenterProtocol {
     
 }
 
-class AddServerPresenter: AddServerPresenterProtocol {
+protocol AddServerPresenterNavigatorProtocol {
+    var onSuccessScreen: (()-> Void)? { get set }
+}
+
+class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigatorProtocol {
     
     //Constants
     private enum Strings {
@@ -24,8 +28,12 @@ class AddServerPresenter: AddServerPresenterProtocol {
         static let buttonTitle = "OK"
     }
     
+    //Properties
     weak var managedView: AddServerViewProtocol?
     var addServerUsecase: AddServerUsecaseProtocol
+    
+    //Navigation
+    var onSuccessScreen: (()-> Void)?
     
     init(addServerUsecase: AddServerUsecaseProtocol) {
         self.addServerUsecase = addServerUsecase
@@ -36,7 +44,8 @@ class AddServerPresenter: AddServerPresenterProtocol {
     }
     
     func onOKButtonTapped(ipAddress: String) {
-        addServerUsecase.addServer(ipAddress: ipAddress)
+        addServerUsecase.addServer(ipAddress: ipAddress) {
+            onSuccessScreen?()
+        }
     }
-    
 }
