@@ -39,6 +39,16 @@ class AddServerPresenterTests: XCTestCase {
         XCTAssertEqual(addServerUsecase.ipAddress, ipAddressDefault)
     }
     
+    func test_onOKButtonTapped_withIPAddress_showsAndHideSpinnerOnView() {
+        
+        let sut = createSUT()
+        sut.start()
+        
+        sut.onOKButtonTapped(ipAddress: ipAddressDefault)
+        XCTAssertTrue(managedView.showSpinnerCalledFlag)
+        XCTAssertTrue(managedView.hideSpinnerCalledFlag)
+    }
+    
     func test_onOKButtonTapped_withIPAddressDoesNotRequireCredentials_navigatesToResultsScreen() {
         let sut = createSUT()
         sut.start()
@@ -103,13 +113,23 @@ extension AddServerPresenterTests {
     }
     
     class AddServerViewControllerMock: AddServerViewProtocol {
-        
+
         var placeholder: String = ""
         var buttonTitle: String = ""
+        var showSpinnerCalledFlag = false
+        var hideSpinnerCalledFlag = false
         
         func updateView(placeholder: String, buttonTitle: String) {
             self.placeholder = placeholder
             self.buttonTitle = buttonTitle
+        }
+        
+        func showSpinner() {
+            showSpinnerCalledFlag = true
+        }
+        
+        func hideSpinner() {
+            hideSpinnerCalledFlag = true
         }
     }
     

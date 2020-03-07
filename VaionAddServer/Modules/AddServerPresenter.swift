@@ -10,6 +10,8 @@ import Foundation
 
 protocol AddServerViewProtocol: class {
     func updateView(placeholder: String, buttonTitle: String)
+    func showSpinner()
+    func hideSpinner()
 }
 
 protocol AddServerPresenterProtocol {
@@ -48,6 +50,7 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     }
     
     func onOKButtonTapped(ipAddress: String) {
+        managedView?.showSpinner()
         addServerUsecase.addServer(ipAddress: ipAddress) { result in
             
             switch result {
@@ -59,5 +62,6 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
                 onError?(error)
             }
         }
+        managedView?.hideSpinner()
     }
 }
