@@ -18,10 +18,16 @@ protocol AddServerPresenterProtocol {
 
 class AddServerPresenter: AddServerPresenterProtocol {
     
+    //Constants
+    private enum Strings {
+        static let placeholder = "IP Address"
+        static let buttonTitle = "OK"
+    }
+    
     weak var managedView: AddServerViewProtocol?
     
     func start() {
-        managedView?.updateView(placeholder: "IP Address", buttonTitle: "OK")
+        managedView?.updateView(placeholder: Strings.placeholder, buttonTitle: Strings.buttonTitle)
     }
     
 }
