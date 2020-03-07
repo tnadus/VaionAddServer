@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01D241325D70018E6F7 /* AppDelegate.swift */; };
+		639FE020241325D70018E6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01F241325D70018E6F7 /* ViewController.swift */; };
+		639FE023241325D70018E6F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639FE021241325D70018E6F7 /* Main.storyboard */; };
+		639FE025241325D80018E6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639FE024241325D80018E6F7 /* Assets.xcassets */; };
+		639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639FE026241325D80018E6F7 /* LaunchScreen.storyboard */; };
+		639FE033241325D80018E6F7 /* VaionAddServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE032241325D80018E6F7 /* VaionAddServerTests.swift */; };
+		639FE03E241325D80018E6F7 /* VaionAddServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		639FE02F241325D80018E6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639FE012241325D70018E6F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639FE019241325D70018E6F7;
+			remoteInfo = VaionAddServer;
+		};
+		639FE03A241325D80018E6F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 639FE012241325D70018E6F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 639FE019241325D70018E6F7;
+			remoteInfo = VaionAddServer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		639FE01A241325D70018E6F7 /* VaionAddServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaionAddServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639FE01D241325D70018E6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		639FE01F241325D70018E6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		639FE022241325D70018E6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		639FE024241325D80018E6F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		639FE027241325D80018E6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		639FE029241325D80018E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639FE02E241325D80018E6F7 /* VaionAddServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaionAddServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639FE032241325D80018E6F7 /* VaionAddServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaionAddServerTests.swift; sourceTree = "<group>"; };
+		639FE034241325D80018E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639FE039241325D80018E6F7 /* VaionAddServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaionAddServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaionAddServerUITests.swift; sourceTree = "<group>"; };
+		639FE03F241325D80018E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		639FE017241325D70018E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE02B241325D80018E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE036241325D80018E6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		639FE011241325D70018E6F7 = {
+			isa = PBXGroup;
+			children = (
+				639FE01C241325D70018E6F7 /* VaionAddServer */,
+				639FE031241325D80018E6F7 /* VaionAddServerTests */,
+				639FE03C241325D80018E6F7 /* VaionAddServerUITests */,
+				639FE01B241325D70018E6F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		639FE01B241325D70018E6F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				639FE01A241325D70018E6F7 /* VaionAddServer.app */,
+				639FE02E241325D80018E6F7 /* VaionAddServerTests.xctest */,
+				639FE039241325D80018E6F7 /* VaionAddServerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		639FE01C241325D70018E6F7 /* VaionAddServer */ = {
+			isa = PBXGroup;
+			children = (
+				639FE01D241325D70018E6F7 /* AppDelegate.swift */,
+				639FE01F241325D70018E6F7 /* ViewController.swift */,
+				639FE021241325D70018E6F7 /* Main.storyboard */,
+				639FE024241325D80018E6F7 /* Assets.xcassets */,
+				639FE026241325D80018E6F7 /* LaunchScreen.storyboard */,
+				639FE029241325D80018E6F7 /* Info.plist */,
+			);
+			path = VaionAddServer;
+			sourceTree = "<group>";
+		};
+		639FE031241325D80018E6F7 /* VaionAddServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				639FE032241325D80018E6F7 /* VaionAddServerTests.swift */,
+				639FE034241325D80018E6F7 /* Info.plist */,
+			);
+			path = VaionAddServerTests;
+			sourceTree = "<group>";
+		};
+		639FE03C241325D80018E6F7 /* VaionAddServerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */,
+				639FE03F241325D80018E6F7 /* Info.plist */,
+			);
+			path = VaionAddServerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		639FE019241325D70018E6F7 /* VaionAddServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639FE042241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServer" */;
+			buildPhases = (
+				639FE016241325D70018E6F7 /* Sources */,
+				639FE017241325D70018E6F7 /* Frameworks */,
+				639FE018241325D70018E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaionAddServer;
+			productName = VaionAddServer;
+			productReference = 639FE01A241325D70018E6F7 /* VaionAddServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		639FE02D241325D80018E6F7 /* VaionAddServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639FE045241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServerTests" */;
+			buildPhases = (
+				639FE02A241325D80018E6F7 /* Sources */,
+				639FE02B241325D80018E6F7 /* Frameworks */,
+				639FE02C241325D80018E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639FE030241325D80018E6F7 /* PBXTargetDependency */,
+			);
+			name = VaionAddServerTests;
+			productName = VaionAddServerTests;
+			productReference = 639FE02E241325D80018E6F7 /* VaionAddServerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		639FE038241325D80018E6F7 /* VaionAddServerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 639FE048241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServerUITests" */;
+			buildPhases = (
+				639FE035241325D80018E6F7 /* Sources */,
+				639FE036241325D80018E6F7 /* Frameworks */,
+				639FE037241325D80018E6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				639FE03B241325D80018E6F7 /* PBXTargetDependency */,
+			);
+			name = VaionAddServerUITests;
+			productName = VaionAddServerUITests;
+			productReference = 639FE039241325D80018E6F7 /* VaionAddServerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		639FE012241325D70018E6F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Tarum Nadus";
+				TargetAttributes = {
+					639FE019241325D70018E6F7 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					639FE02D241325D80018E6F7 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 639FE019241325D70018E6F7;
+					};
+					639FE038241325D80018E6F7 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 639FE019241325D70018E6F7;
+					};
+				};
+			};
+			buildConfigurationList = 639FE015241325D70018E6F7 /* Build configuration list for PBXProject "VaionAddServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 639FE011241325D70018E6F7;
+			productRefGroup = 639FE01B241325D70018E6F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				639FE019241325D70018E6F7 /* VaionAddServer */,
+				639FE02D241325D80018E6F7 /* VaionAddServerTests */,
+				639FE038241325D80018E6F7 /* VaionAddServerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		639FE018241325D70018E6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */,
+				639FE025241325D80018E6F7 /* Assets.xcassets in Resources */,
+				639FE023241325D70018E6F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE02C241325D80018E6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE037241325D80018E6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		639FE016241325D70018E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639FE020241325D70018E6F7 /* ViewController.swift in Sources */,
+				639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE02A241325D80018E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639FE033241325D80018E6F7 /* VaionAddServerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		639FE035241325D80018E6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639FE03E241325D80018E6F7 /* VaionAddServerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		639FE030241325D80018E6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639FE019241325D70018E6F7 /* VaionAddServer */;
+			targetProxy = 639FE02F241325D80018E6F7 /* PBXContainerItemProxy */;
+		};
+		639FE03B241325D80018E6F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 639FE019241325D70018E6F7 /* VaionAddServer */;
+			targetProxy = 639FE03A241325D80018E6F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		639FE021241325D70018E6F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639FE022241325D70018E6F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		639FE026241325D80018E6F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				639FE027241325D80018E6F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		639FE040241325D80018E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		639FE041241325D80018E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		639FE043241325D80018E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		639FE044241325D80018E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		639FE046241325D80018E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaionAddServer.app/VaionAddServer";
+			};
+			name = Debug;
+		};
+		639FE047241325D80018E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaionAddServer.app/VaionAddServer";
+			};
+			name = Release;
+		};
+		639FE049241325D80018E6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaionAddServer;
+			};
+			name = Debug;
+		};
+		639FE04A241325D80018E6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2G876RW9RP;
+				INFOPLIST_FILE = VaionAddServerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.elmadigital.VaionAddServerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaionAddServer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		639FE015241325D70018E6F7 /* Build configuration list for PBXProject "VaionAddServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639FE040241325D80018E6F7 /* Debug */,
+				639FE041241325D80018E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639FE042241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639FE043241325D80018E6F7 /* Debug */,
+				639FE044241325D80018E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639FE045241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639FE046241325D80018E6F7 /* Debug */,
+				639FE047241325D80018E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		639FE048241325D80018E6F7 /* Build configuration list for PBXNativeTarget "VaionAddServerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				639FE049241325D80018E6F7 /* Debug */,
+				639FE04A241325D80018E6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 639FE012241325D70018E6F7 /* Project object */;
+}
