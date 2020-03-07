@@ -9,12 +9,12 @@
 import Foundation
 
 protocol AddServerUsecaseProtocol {
-    func addServer()
+    func addServer(ipAddress: String)
 }
 
 class AddServerUsecase: AddServerUsecaseProtocol {
     
-    func addServer() {
+    func addServer(ipAddress: String) {
         
     }
     

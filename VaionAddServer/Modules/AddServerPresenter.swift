@@ -35,8 +35,8 @@ class AddServerPresenter: AddServerPresenterProtocol {
         managedView?.updateView(placeholder: Strings.placeholder, buttonTitle: Strings.buttonTitle)
     }
     
-    func onOKButtonTapped() {
-        addServerUsecase.addServer()
+    func onOKButtonTapped(ipAddress: String) {
+        addServerUsecase.addServer(ipAddress: ipAddress)
     }
     
 }

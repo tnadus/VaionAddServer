@@ -29,14 +29,17 @@ class AddServerPresenterTests: XCTestCase {
         XCTAssertEqual(managedView.buttonTitle, "OK")
     }
     
-    func test_onOKButtonTapped_callsAddServerOnAddServerUsecase() {
+    func test_onOKButtonTapped_withIPAddress_receivedOnAddServerUsecase() {
         
         let sut = createSUT()
         sut.start()
         
-        sut.onOKButtonTapped()
-        XCTAssertEqual(addServerUsecase.addServerFlagCalled, true)
+        let ipAddress = "127.0.0.1"
+        sut.onOKButtonTapped(ipAddress: ipAddress)
+        XCTAssertEqual(addServerUsecase.ipAddress, ipAddress)
     }
+    
+
 }
 
 //MARK: Helpers
@@ -61,12 +64,11 @@ extension AddServerPresenterTests {
     
     class AddServerUsecaseMock: AddServerUsecaseProtocol {
         
-        var addServerFlagCalled = false
+        var ipAddress: String = ""
         
-        func addServer() {
-            addServerFlagCalled = true
+        func addServer(ipAddress: String) {
+            self.ipAddress = ipAddress
         }
-        
     }
     
 }
