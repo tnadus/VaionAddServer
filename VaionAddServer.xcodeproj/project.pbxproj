@@ -12,7 +12,11 @@
 		639FE025241325D80018E6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639FE024241325D80018E6F7 /* Assets.xcassets */; };
 		639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639FE026241325D80018E6F7 /* LaunchScreen.storyboard */; };
 		639FE033241325D80018E6F7 /* VaionAddServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE032241325D80018E6F7 /* VaionAddServerTests.swift */; };
-		639FE03E241325D80018E6F7 /* VaionAddServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */; };
+		639FE04C241328780018E6F7 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE04B241328780018E6F7 /* ModuleFactory.swift */; };
+		639FE04F241329C90018E6F7 /* AddServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE04D241329C90018E6F7 /* AddServerViewController.swift */; };
+		639FE050241329C90018E6F7 /* AddServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639FE04E241329C90018E6F7 /* AddServerViewController.xib */; };
+		639FE05224132A160018E6F7 /* AddServerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE05124132A160018E6F7 /* AddServerPresenter.swift */; };
+		639FE05324132B3E0018E6F7 /* VaionAddServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		639FE039241325D80018E6F7 /* VaionAddServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaionAddServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639FE03D241325D80018E6F7 /* VaionAddServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaionAddServerUITests.swift; sourceTree = "<group>"; };
 		639FE03F241325D80018E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639FE04B241328780018E6F7 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		639FE04D241329C90018E6F7 /* AddServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerViewController.swift; sourceTree = "<group>"; };
+		639FE04E241329C90018E6F7 /* AddServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddServerViewController.xib; sourceTree = "<group>"; };
+		639FE05124132A160018E6F7 /* AddServerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				639FE024241325D80018E6F7 /* Assets.xcassets */,
 				639FE026241325D80018E6F7 /* LaunchScreen.storyboard */,
 				639FE029241325D80018E6F7 /* Info.plist */,
+				639FE04B241328780018E6F7 /* ModuleFactory.swift */,
+				639FE04D241329C90018E6F7 /* AddServerViewController.swift */,
+				639FE04E241329C90018E6F7 /* AddServerViewController.xib */,
+				639FE05124132A160018E6F7 /* AddServerPresenter.swift */,
 			);
 			path = VaionAddServer;
 			sourceTree = "<group>";
@@ -226,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639FE050241329C90018E6F7 /* AddServerViewController.xib in Resources */,
 				639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */,
 				639FE025241325D80018E6F7 /* Assets.xcassets in Resources */,
 			);
@@ -253,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				639FE020241325D70018E6F7 /* ViewController.swift in Sources */,
+				639FE04C241328780018E6F7 /* ModuleFactory.swift in Sources */,
 				639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */,
+				639FE04F241329C90018E6F7 /* AddServerViewController.swift in Sources */,
+				639FE05224132A160018E6F7 /* AddServerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639FE03E241325D80018E6F7 /* VaionAddServerUITests.swift in Sources */,
+				639FE05324132B3E0018E6F7 /* VaionAddServerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
