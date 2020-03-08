@@ -10,6 +10,10 @@ import UIKit
 
 class AddServerSuccessViewController: UIViewController {
     
+    //IBOutlets
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelMessage: UILabel!
+    
     //Properties
     let successInfo: AddServerSuccessInfo
     
@@ -24,19 +28,11 @@ class AddServerSuccessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateSubviews()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func updateSubviews() {
+        labelTitle.text = successInfo.title
+        labelMessage.text = successInfo.message
     }
-    */
-
 }
