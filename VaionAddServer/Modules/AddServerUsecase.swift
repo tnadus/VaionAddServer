@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AddServerUsecaseProtocol {
-    func addServer(ipAddress: String, onCompletion: @escaping (AddServerUsecase.Result) -> Void)
+    func addServer(ipAddress: String, credentials: Credentials?, onCompletion: @escaping (AddServerUsecase.Result) -> Void)
 }
 
 class AddServerUsecase: AddServerUsecaseProtocol {
@@ -32,8 +32,8 @@ class AddServerUsecase: AddServerUsecaseProtocol {
         self.networking = networking
     }
     
-    func addServer(ipAddress: String, onCompletion: @escaping (Result) -> Void) {
-        networking.connectToServer(ipAddress: ipAddress, credentials: nil) { (response) in
+    func addServer(ipAddress: String, credentials: Credentials? = nil, onCompletion: @escaping (Result) -> Void) {
+        networking.connectToServer(ipAddress: ipAddress, credentials: credentials) { (response) in
             if response.success {
                 onCompletion(.success)
             } else if response.code == Constants.codeRequiresCredential {

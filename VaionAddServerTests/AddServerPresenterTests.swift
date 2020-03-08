@@ -124,15 +124,4 @@ extension AddServerPresenterTests {
             hideSpinnerCalledFlag = true
         }
     }
-    
-    class AddServerUsecaseMock: AddServerUsecaseProtocol {
-
-        var ipAddress: String = ""
-        var result: AddServerUsecase.Result = .success
-        
-        func addServer(ipAddress: String, onCompletion: (AddServerUsecase.Result) -> Void) {
-            self.ipAddress = ipAddress
-            onCompletion(result)
-        }
-    }
 }

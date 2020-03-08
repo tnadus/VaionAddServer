@@ -52,7 +52,8 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     
     func onOKButtonTapped(ipAddress: String) {
         managedView?.showSpinner()
-        addServerUsecase.addServer(ipAddress: ipAddress) { [weak self] result in
+        addServerUsecase.addServer(ipAddress: ipAddress, credentials: nil) {
+            [weak self] result in
             
             switch result {
             case .success:
@@ -62,7 +63,7 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
             case .error(let error):
                 self?.onError?(error)
             }
+            self?.managedView?.hideSpinner()
         }
-        managedView?.hideSpinner()
     }
 }
