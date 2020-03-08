@@ -14,6 +14,11 @@ protocol AddServerUsecaseProtocol {
 
 class AddServerUsecase: AddServerUsecaseProtocol {
     
+    //Constants
+    private enum Constants {
+        static let codeRequiresCredential: Int = 400
+    }
+    
     enum Result {
         case success
         case login
@@ -31,10 +36,10 @@ class AddServerUsecase: AddServerUsecaseProtocol {
         networking.connectToServer(ipAddress: ipAddress, credentials: nil) { (response) in
             if response.success {
                 onCompletion(.success)
-            } else if response.code == 401 {
+            } else if response.code == Constants.codeRequiresCredential {
                 onCompletion(.login)
             } else {
-                let error = NSError.init(domain: "com.vaion.addserver", code: response.code, userInfo: ["description" : response.message])
+                let error = NSError(domain: "com.vaion.addserver", code: response.code, userInfo: ["description" : response.message])
                 onCompletion(.error(error))
             }
         }
