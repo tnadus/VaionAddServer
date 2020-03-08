@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6353D28B24158DE6001F313A /* AddServerSuccessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D28A24158DE6001F313A /* AddServerSuccessInfo.swift */; };
+		6353D28E24158E0F001F313A /* AddServerSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D28C24158E0F001F313A /* AddServerSuccessViewController.swift */; };
+		6353D28F24158E0F001F313A /* AddServerSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6353D28D24158E0F001F313A /* AddServerSuccessViewController.xib */; };
 		639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01D241325D70018E6F7 /* AppDelegate.swift */; };
 		639FE020241325D70018E6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01F241325D70018E6F7 /* ViewController.swift */; };
 		639FE025241325D80018E6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639FE024241325D80018E6F7 /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6353D28A24158DE6001F313A /* AddServerSuccessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerSuccessInfo.swift; sourceTree = "<group>"; };
+		6353D28C24158E0F001F313A /* AddServerSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerSuccessViewController.swift; sourceTree = "<group>"; };
+		6353D28D24158E0F001F313A /* AddServerSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddServerSuccessViewController.xib; sourceTree = "<group>"; };
 		639FE01A241325D70018E6F7 /* VaionAddServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaionAddServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639FE01D241325D70018E6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639FE01F241325D70018E6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6353D28924158DCF001F313A /* AddServerSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				6353D28A24158DE6001F313A /* AddServerSuccessInfo.swift */,
+				6353D28C24158E0F001F313A /* AddServerSuccessViewController.swift */,
+				6353D28D24158E0F001F313A /* AddServerSuccessViewController.xib */,
+			);
+			name = AddServerSuccess;
+			sourceTree = "<group>";
+		};
 		639FE011241325D70018E6F7 = {
 			isa = PBXGroup;
 			children = (
@@ -165,8 +181,9 @@
 		639FE05624132DD90018E6F7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				639FE0692414FEFB0018E6F7 /* Login */,
 				639FE04B241328780018E6F7 /* ModuleFactory.swift */,
+				6353D28924158DCF001F313A /* AddServerSuccess */,
+				639FE0692414FEFB0018E6F7 /* Login */,
 				639FE05724132DE30018E6F7 /* AddServer */,
 			);
 			path = Modules;
@@ -298,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6353D28F24158E0F001F313A /* AddServerSuccessViewController.xib in Resources */,
 				639FE0722415050F0018E6F7 /* LoginViewController.xib in Resources */,
 				639FE050241329C90018E6F7 /* AddServerViewController.xib in Resources */,
 				639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */,
@@ -334,8 +352,10 @@
 				639FE04F241329C90018E6F7 /* AddServerViewController.swift in Sources */,
 				639FE05B2413970B0018E6F7 /* AddServerUsecase.swift in Sources */,
 				639FE05224132A160018E6F7 /* AddServerPresenter.swift in Sources */,
+				6353D28B24158DE6001F313A /* AddServerSuccessInfo.swift in Sources */,
 				639FE07B24150AF10018E6F7 /* LoginViewModel.swift in Sources */,
 				639FE0652414E2EA0018E6F7 /* Networking.swift in Sources */,
+				6353D28E24158E0F001F313A /* AddServerSuccessViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

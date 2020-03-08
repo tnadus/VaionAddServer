@@ -23,4 +23,11 @@ class ModuleFactory {
         let vc = LoginViewController(presenter: presenter)
         return (vc, presenter)
     }
+    
+    func makeAddServerSuccessModule() -> AddServerSuccessViewController {
+        let successInfo = AddServerSuccessInfo(title: "Success!", message: "Server is successfully added to the cluster")
+        let vc = AddServerSuccessViewController(successInfo: successInfo)
+        return vc
+    }
+    
 }

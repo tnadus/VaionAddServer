@@ -22,4 +22,9 @@ class ModuleFactoryTests: XCTestCase {
         XCTAssertTrue(vc is LoginViewController)
         XCTAssertTrue(presenter is LoginPresenter)
     }
+    
+    func test_moduleFactory_makesAddServerSuccessModule() {
+        let vc = ModuleFactory().makeAddServerSuccessModule()
+        XCTAssertTrue(vc is AddServerSuccessViewController)
+    }
 }
