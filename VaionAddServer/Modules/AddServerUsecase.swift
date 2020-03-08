@@ -16,7 +16,7 @@ class AddServerUsecase: AddServerUsecaseProtocol {
     
     //Constants
     private enum Constants {
-        static let codeRequiresCredential: Int = 400
+        static let codeRequiresCredential: Int = 401
     }
     
     enum Result {

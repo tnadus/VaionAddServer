@@ -17,4 +17,10 @@ class ModuleFactory {
         return (vc, presenter)
     }
     
+    func makeLoginModule() -> (LoginViewController, LoginPresenter) {
+        let addServerUsecase = AddServerUsecase()
+        let presenter = LoginPresenter(addServerUsecase: addServerUsecase)
+        let vc = LoginViewController(presenter: presenter)
+        return (vc, presenter)
+    }
 }
