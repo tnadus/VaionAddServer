@@ -10,39 +10,32 @@ import XCTest
 @testable import VaionAddServer
 
 class AddServerViewControllerTests: XCTestCase {
+    
+    var presenter: AddServerPresenterMock!
+    var sut: AddServerViewController!
+    
+    override func setUp() {
+        super.setUp()
+        presenter = AddServerPresenterMock()
+        sut = createSUT()
+    }
         
     func test_viewDidLoad_startsPresenter() {
-        
-        let presenter = AddServerPresenterMock()
-        let sut = AddServerViewController(presenter: presenter)
-        _ = sut.view
         XCTAssertTrue(presenter.startCalledFlag)
     }
     
     func test_OKButton_setDisabled_emptyIPAddressLabel() {
-        let presenter = AddServerPresenterMock()
-        let sut = AddServerViewController(presenter: presenter)
-        _ = sut.view
-        
         sut.textFieldIPAddress.text = ""
         XCTAssertEqual(sut.buttonOK.isEnabled, false)
     }
     
     func test_OKButton_withNonEmptyIPAddress_setEnabled() {
-        let presenter = AddServerPresenterMock()
-        let sut = AddServerViewController(presenter: presenter)
-        _ = sut.view
-        
         sut.textFieldIPAddress.text = "127"
         sut.textFieldIPAddress.sendActions(for: .editingChanged)
         XCTAssertEqual(sut.buttonOK.isEnabled, true)
     }
     
-    func test_OKButtonTapped_callsPresenterButtonTap() {
-        let presenter = AddServerPresenterMock()
-        let sut = AddServerViewController(presenter: presenter)
-        _ = sut.view
-        
+    func test_OKButtonTapped_callsPresenterButtonTap() {        
         sut.onButtonOKTapped(sut.buttonOK as Any)
         XCTAssertEqual(presenter.buttonOKTappedCalledFlag, true)
     }
@@ -50,6 +43,12 @@ class AddServerViewControllerTests: XCTestCase {
 }
 
 extension AddServerViewControllerTests {
+    
+    func createSUT() -> AddServerViewController {
+        let sut = AddServerViewController(presenter: presenter)
+        _ = sut.view
+        return sut
+    }
     
     class AddServerPresenterMock: AddServerPresenterProtocol {
         
