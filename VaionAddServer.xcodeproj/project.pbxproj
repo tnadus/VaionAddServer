@@ -28,6 +28,7 @@
 		639FE074241508180018E6F7 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE073241508180018E6F7 /* LoginPresenterTests.swift */; };
 		639FE079241509A60018E6F7 /* AddServerUsecaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE078241509A60018E6F7 /* AddServerUsecaseMock.swift */; };
 		639FE07B24150AF10018E6F7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE07A24150AF10018E6F7 /* LoginViewModel.swift */; };
+		639FE07F241557520018E6F7 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE07E241557520018E6F7 /* LoginViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		639FE073241508180018E6F7 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		639FE078241509A60018E6F7 /* AddServerUsecaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerUsecaseMock.swift; sourceTree = "<group>"; };
 		639FE07A24150AF10018E6F7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		639FE07E241557520018E6F7 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				639FE0622414E2920018E6F7 /* AddServerUsecaseTests.swift */,
 				639FE073241508180018E6F7 /* LoginPresenterTests.swift */,
 				639FE078241509A60018E6F7 /* AddServerUsecaseMock.swift */,
+				639FE07E241557520018E6F7 /* LoginViewControllerTests.swift */,
 			);
 			path = VaionAddServerTests;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				639FE079241509A60018E6F7 /* AddServerUsecaseMock.swift in Sources */,
 				639FE05F2413FC6D0018E6F7 /* AddServerViewControllerTests.swift in Sources */,
 				639FE05524132D1F0018E6F7 /* ModuleFactoryTests.swift in Sources */,
+				639FE07F241557520018E6F7 /* LoginViewControllerTests.swift in Sources */,
 				639FE0632414E2920018E6F7 /* AddServerUsecaseTests.swift in Sources */,
 				639FE05924132E110018E6F7 /* AddServerPresenterTests.swift in Sources */,
 				639FE074241508180018E6F7 /* LoginPresenterTests.swift in Sources */,

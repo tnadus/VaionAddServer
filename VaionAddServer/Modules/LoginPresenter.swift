@@ -17,6 +17,7 @@ protocol LoginViewProtocol: class {
 protocol LoginPresenterProtocol {
     func start()
     func onButtonOKTapped(credentials: Credentials)
+    func onButtonCancelTapped()
 }
 
 protocol LoginPresenterNavigator {
