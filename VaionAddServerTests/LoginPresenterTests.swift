@@ -13,14 +13,7 @@ class LoginPresenterTests: XCTestCase {
     
     let addServerUsecase = AddServerUsecaseMock()
     let loginView = LoginViewControllerMock()
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    let credentials = Credentials(username: "usr", password: "pwd")
     
     func test_start_withOnViewDidLoad_updatesViewWithViewModelWithCorrectValues() {
         let sut = createSUT()
@@ -35,7 +28,6 @@ class LoginPresenterTests: XCTestCase {
         let sut = createSUT()
         sut.start()
         
-        let credentials = Credentials(username: "usr", password: "pwd")
         sut.onButtonOKTapped(credentials: credentials)
         XCTAssertTrue(loginView.showSpinnerCalledFlag)
     }
@@ -53,7 +45,6 @@ class LoginPresenterTests: XCTestCase {
             onSuccessScreenCalled = true
         }
         
-        let credentials = Credentials(username: "usr", password: "pwd")
         sut.onButtonOKTapped(credentials: credentials)
         waitForExpectations(timeout: 1.0, handler: nil)
         XCTAssertTrue(onSuccessScreenCalled)
@@ -73,7 +64,6 @@ class LoginPresenterTests: XCTestCase {
             onUnauthorizedCalled = true
         }
         
-        let credentials = Credentials(username: "usr", password: "pwd")
         sut.onButtonOKTapped(credentials: credentials)
         waitForExpectations(timeout: 1.0, handler: nil)
         XCTAssertTrue(onUnauthorizedCalled)
@@ -92,7 +82,6 @@ class LoginPresenterTests: XCTestCase {
             XCTAssertEqual((err as NSError).code, 500)
         }
         
-        let credentials = Credentials(username: "usr", password: "pwd")
         sut.onButtonOKTapped(credentials: credentials)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
@@ -102,7 +91,6 @@ class LoginPresenterTests: XCTestCase {
         sut.start()
         
         let expect = expectation(description: "onError")
-        let credentials = Credentials(username: "usr", password: "pwd")
         sut.onButtonOKTapped(credentials: credentials)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
