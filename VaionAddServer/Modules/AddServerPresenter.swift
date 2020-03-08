@@ -52,15 +52,15 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     
     func onOKButtonTapped(ipAddress: String) {
         managedView?.showSpinner()
-        addServerUsecase.addServer(ipAddress: ipAddress) { result in
+        addServerUsecase.addServer(ipAddress: ipAddress) { [weak self] result in
             
             switch result {
             case .success:
-                onSuccessScreen?()
+                self?.onSuccessScreen?()
             case .login:
-                onLoginScreen?()
+                self?.onLoginScreen?()
             case .error(let error):
-                onError?(error)
+                self?.onError?(error)
             }
         }
         managedView?.hideSpinner()
