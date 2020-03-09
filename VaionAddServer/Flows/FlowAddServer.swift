@@ -56,7 +56,7 @@ class FlowAddServer {
     
     func showErrorAlert(error: Error) {
         let title = "Error - \((error as NSError).code)"
-        let message = "Unexpected error, sorry"
+        let message = "Unexpected error"
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         router.present(alertController, animated: true, completion: nil)
