@@ -13,6 +13,7 @@ class AddServerViewController: UIViewController {
     //IBOutlets
     @IBOutlet weak var textFieldIPAddress: UITextField!
     @IBOutlet weak var buttonOK: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     //Properties
     private var presenter: AddServerPresenterProtocol
@@ -29,6 +30,7 @@ class AddServerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSubViews()
+        presenter.managedView = self
         presenter.start()
     }
     
@@ -59,12 +61,12 @@ extension AddServerViewController: AddServerViewProtocol {
     }
     
     func showSpinner() {
-        
+        self.view.isUserInteractionEnabled = false
+        spinner.startAnimating()
     }
     
     func hideSpinner() {
-        
+        spinner.stopAnimating()
+        self.view.isUserInteractionEnabled = true
     }
-    
-    
 }

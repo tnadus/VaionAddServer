@@ -14,10 +14,11 @@ protocol LoginViewProtocol: class {
     func hideSpinner()
 }
 
-protocol LoginPresenterProtocol {
+protocol LoginPresenterProtocol: class {
     func start()
     func onButtonOKTapped(credentials: Credentials)
     func onButtonCancelTapped()
+    var managedView: LoginViewProtocol? { get set }
 }
 
 protocol LoginPresenterNavigatorProtocol {

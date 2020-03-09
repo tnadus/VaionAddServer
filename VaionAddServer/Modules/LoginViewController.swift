@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSubviews()
+        presenter.managedView = self
         presenter.start()
     }
     
