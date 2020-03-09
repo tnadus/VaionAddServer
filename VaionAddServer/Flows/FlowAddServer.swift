@@ -32,10 +32,9 @@ class FlowAddServer {
             self?.navigateToLoginScreen()
         }
         navigator.onError = showErrorAlert
-                
-        router.present(vc, animated: false) {
-            navCompletion?(navigator)
-        }
+        
+        router.pushViewController(vc, animated: false)
+        navCompletion?(navigator)
     }
     
     func navigateToSuccessScreen() {
@@ -54,7 +53,7 @@ class FlowAddServer {
     func showErrorAlert(error: Error) {
         let title = "Error - \((error as NSError).code)"
         let message = "Unexpected error, sorry"
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         router.present(alertController, animated: true, completion: nil)
     }

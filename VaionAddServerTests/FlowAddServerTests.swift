@@ -25,7 +25,7 @@ class FlowAddServerTests: XCTestCase {
         let sut = FlowAddServer(router: router, moduleFactory: moduleFactory)
         sut.start()
         
-        XCTAssertTrue(router.lastPresentedViewController is AddServerViewController)
+        XCTAssertTrue(router.lastPushedViewController is AddServerViewController)
     }
     
     func test_flow_addServerScreenWithNoCredentialRequiredIPAddress_navigatesToAddServerSuccessScreen() {
