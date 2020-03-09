@@ -99,6 +99,7 @@ extension FlowAddServerTests {
         
         var lastPresentedViewController: UIViewController? = nil
         var lastPushedViewController: UIViewController? = nil
+        var lastPoppedViewControllerCalledFlag: Bool = false
         
         func present(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?) {
             lastPresentedViewController = viewControllerToPresent
@@ -107,6 +108,11 @@ extension FlowAddServerTests {
         
         func pushViewController(_ viewController: UIViewController, animated: Bool) {
             lastPushedViewController = viewController
+        }
+        
+        func popViewController(animated: Bool) -> UIViewController? {
+            lastPoppedViewControllerCalledFlag = true
+            return nil
         }
     }
 }

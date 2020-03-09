@@ -11,6 +11,7 @@ import UIKit
 protocol Router {
     func present(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
     func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func popViewController(animated: Bool) -> UIViewController?
 }
 
 class FlowAddServer {
@@ -46,6 +47,9 @@ class FlowAddServer {
         
         let (vc, navigator) = moduleFactory.makeLoginModule(ipAddress: ipAddress)
         navigator.onSuccessScreen = navigateToSuccessScreen
+        navigator.onCancelled = { [weak self] in
+            self?.router.popViewController(animated: true)
+        }
         router.pushViewController(vc, animated: true)
         navCompletion?(navigator)
     }
