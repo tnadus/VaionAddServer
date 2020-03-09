@@ -15,7 +15,6 @@
 		6353D29E24159265001F313A /* FlowAddServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D29D24159265001F313A /* FlowAddServer.swift */; };
 		6353D2A124163AE3001F313A /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D2A024163AE3001F313A /* UINavigationController+extension.swift */; };
 		639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01D241325D70018E6F7 /* AppDelegate.swift */; };
-		639FE020241325D70018E6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01F241325D70018E6F7 /* ViewController.swift */; };
 		639FE025241325D80018E6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639FE024241325D80018E6F7 /* Assets.xcassets */; };
 		639FE028241325D80018E6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639FE026241325D80018E6F7 /* LaunchScreen.storyboard */; };
 		639FE04C241328780018E6F7 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE04B241328780018E6F7 /* ModuleFactory.swift */; };
@@ -65,7 +64,6 @@
 		6353D2A024163AE3001F313A /* UINavigationController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
 		639FE01A241325D70018E6F7 /* VaionAddServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaionAddServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639FE01D241325D70018E6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		639FE01F241325D70018E6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		639FE024241325D80018E6F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		639FE027241325D80018E6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639FE029241325D80018E6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				6353D29824159136001F313A /* Usecases */,
 				639FE05624132DD90018E6F7 /* Modules */,
 				639FE01D241325D70018E6F7 /* AppDelegate.swift */,
-				639FE01F241325D70018E6F7 /* ViewController.swift */,
 				639FE024241325D80018E6F7 /* Assets.xcassets */,
 				639FE026241325D80018E6F7 /* LaunchScreen.storyboard */,
 				639FE029241325D80018E6F7 /* Info.plist */,
@@ -432,7 +429,6 @@
 				639FE0712415050F0018E6F7 /* LoginViewController.swift in Sources */,
 				6353D2A124163AE3001F313A /* UINavigationController+extension.swift in Sources */,
 				639FE06B2414FF060018E6F7 /* LoginPresenter.swift in Sources */,
-				639FE020241325D70018E6F7 /* ViewController.swift in Sources */,
 				639FE04C241328780018E6F7 /* ModuleFactory.swift in Sources */,
 				639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */,
 				639FE04F241329C90018E6F7 /* AddServerViewController.swift in Sources */,
