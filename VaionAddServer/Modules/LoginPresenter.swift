@@ -20,13 +20,13 @@ protocol LoginPresenterProtocol {
     func onButtonCancelTapped()
 }
 
-protocol LoginPresenterNavigator {
+protocol LoginPresenterNavigatorProtocol {
     var onSuccessScreen: (() -> Void)? { get set }
     var onUnauthorized: (() -> Void)? { get set }
     var onError: ((Error) -> Void)? { get set }
 }
 
-class LoginPresenter: LoginPresenterProtocol {
+class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
     
     //Properties
     let addServerUsecase: AddServerUsecaseProtocol

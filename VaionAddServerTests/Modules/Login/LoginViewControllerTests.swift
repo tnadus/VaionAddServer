@@ -69,7 +69,7 @@ class LoginViewControllerTests: XCTestCase {
 
 extension LoginViewControllerTests {
     
-    class LoginPresenterMock: LoginPresenterProtocol, LoginPresenterNavigator {
+    class LoginPresenterMock: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
  
         var onSuccessScreen: (() -> Void)?
         var onUnauthorized: (() -> Void)?

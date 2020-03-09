@@ -11,6 +11,8 @@
 		6353D28E24158E0F001F313A /* AddServerSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D28C24158E0F001F313A /* AddServerSuccessViewController.swift */; };
 		6353D28F24158E0F001F313A /* AddServerSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6353D28D24158E0F001F313A /* AddServerSuccessViewController.xib */; };
 		6353D29124158FB3001F313A /* AddServerSuccessViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D29024158FB3001F313A /* AddServerSuccessViewControllerTests.swift */; };
+		6353D29B241591F8001F313A /* FlowAddServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D29A241591F8001F313A /* FlowAddServerTests.swift */; };
+		6353D29E24159265001F313A /* FlowAddServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6353D29D24159265001F313A /* FlowAddServer.swift */; };
 		639FE01E241325D70018E6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01D241325D70018E6F7 /* AppDelegate.swift */; };
 		639FE020241325D70018E6F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FE01F241325D70018E6F7 /* ViewController.swift */; };
 		639FE025241325D80018E6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639FE024241325D80018E6F7 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		6353D28C24158E0F001F313A /* AddServerSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServerSuccessViewController.swift; sourceTree = "<group>"; };
 		6353D28D24158E0F001F313A /* AddServerSuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddServerSuccessViewController.xib; sourceTree = "<group>"; };
 		6353D29024158FB3001F313A /* AddServerSuccessViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServerSuccessViewControllerTests.swift; sourceTree = "<group>"; };
+		6353D29A241591F8001F313A /* FlowAddServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowAddServerTests.swift; sourceTree = "<group>"; };
+		6353D29D24159265001F313A /* FlowAddServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowAddServer.swift; sourceTree = "<group>"; };
 		639FE01A241325D70018E6F7 /* VaionAddServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaionAddServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639FE01D241325D70018E6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639FE01F241325D70018E6F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		6353D29C2415924D001F313A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				6353D29D24159265001F313A /* FlowAddServer.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
 		639FE011241325D70018E6F7 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +219,7 @@
 		639FE01C241325D70018E6F7 /* VaionAddServer */ = {
 			isa = PBXGroup;
 			children = (
+				6353D29C2415924D001F313A /* Flows */,
 				6353D2992415914E001F313A /* Network */,
 				6353D29824159136001F313A /* Usecases */,
 				639FE05624132DD90018E6F7 /* Modules */,
@@ -226,6 +239,7 @@
 				6353D296241590CB001F313A /* Mocks */,
 				6353D29224159082001F313A /* Modules */,
 				639FE034241325D80018E6F7 /* Info.plist */,
+				6353D29A241591F8001F313A /* FlowAddServerTests.swift */,
 			);
 			path = VaionAddServerTests;
 			sourceTree = "<group>";
@@ -412,6 +426,7 @@
 				639FE04F241329C90018E6F7 /* AddServerViewController.swift in Sources */,
 				639FE05B2413970B0018E6F7 /* AddServerUsecase.swift in Sources */,
 				639FE05224132A160018E6F7 /* AddServerPresenter.swift in Sources */,
+				6353D29E24159265001F313A /* FlowAddServer.swift in Sources */,
 				6353D28B24158DE6001F313A /* AddServerSuccessInfo.swift in Sources */,
 				639FE07B24150AF10018E6F7 /* LoginViewModel.swift in Sources */,
 				639FE0652414E2EA0018E6F7 /* Networking.swift in Sources */,
@@ -430,6 +445,7 @@
 				639FE0632414E2920018E6F7 /* AddServerUsecaseTests.swift in Sources */,
 				639FE05924132E110018E6F7 /* AddServerPresenterTests.swift in Sources */,
 				639FE074241508180018E6F7 /* LoginPresenterTests.swift in Sources */,
+				6353D29B241591F8001F313A /* FlowAddServerTests.swift in Sources */,
 				6353D29124158FB3001F313A /* AddServerSuccessViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
