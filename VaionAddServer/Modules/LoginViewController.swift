@@ -75,4 +75,10 @@ extension LoginViewController: LoginViewProtocol {
         view.isUserInteractionEnabled = true
         spinner.stopAnimating()
     }
+    
+    func resetCredentials() {
+        textFieldUsername.text = ""
+        textFieldPassword.text = ""
+        DispatchQueue.main.async { self.textFieldUsername.becomeFirstResponder() }
+    }
 }

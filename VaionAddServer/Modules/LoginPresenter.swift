@@ -12,6 +12,7 @@ protocol LoginViewProtocol: class {
     func updateView(viewModel: LoginViewModel)
     func showSpinner()
     func hideSpinner()
+    func resetCredentials()
 }
 
 protocol LoginPresenterProtocol: class {
@@ -23,7 +24,6 @@ protocol LoginPresenterProtocol: class {
 
 protocol LoginPresenterNavigatorProtocol {
     var onSuccessScreen: (() -> Void)? { get set }
-    var onUnauthorized: (() -> Void)? { get set }
     var onError: ((Error) -> Void)? { get set }
 }
 
@@ -36,7 +36,6 @@ class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
     
     //navigation
     var onSuccessScreen: (() -> Void)?
-    var onUnauthorized: (() -> Void)?
     var onError: ((Error) -> Void)?
     var onCancelled: (() -> Void)?
     
@@ -60,7 +59,7 @@ class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
             case .success:
                 self?.onSuccessScreen?()
             case .login:
-                self?.onUnauthorized?()
+                self?.managedView?.resetCredentials()
             case .error(let error):
                 self?.onError?(error)
             }

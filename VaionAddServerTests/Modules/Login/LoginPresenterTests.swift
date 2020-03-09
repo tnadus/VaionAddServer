@@ -57,16 +57,8 @@ class LoginPresenterTests: XCTestCase {
         
         addServerUsecase.result = .login
         
-        let expect = expectation(description: "onUnauthorized")
-        var onUnauthorizedCalled = false
-        sut.onUnauthorized = {
-            expect.fulfill()
-            onUnauthorizedCalled = true
-        }
-        
         sut.onButtonOKTapped(credentials: credentials)
-        waitForExpectations(timeout: 1.0, handler: nil)
-        XCTAssertTrue(onUnauthorizedCalled)
+        XCTAssertTrue(loginView.resetCredentialsCalledFlag)
     }
     
     func test_onButtonOKTapped_withInvalidCredentials_receivesError() {
@@ -124,11 +116,12 @@ extension LoginPresenterTests {
     }
     
     class LoginViewControllerMock: LoginViewProtocol {
-        
+
         //Properties
         var viewModel: LoginViewModel = LoginViewModel(placeholderUsername: "", placeholderPassword: "", buttonTitleOK: "", buttonTitleCancel: "")
         var showSpinnerCalledFlag = false
         var hideSpinnerCalledFlag = false
+        var resetCredentialsCalledFlag = false
         
         func updateView(viewModel: LoginViewModel) {
             self.viewModel = viewModel
@@ -140,6 +133,10 @@ extension LoginPresenterTests {
         
         func hideSpinner() {
             hideSpinnerCalledFlag = true
+        }
+        
+        func resetCredentials() {
+            resetCredentialsCalledFlag = true
         }
     }
 }
