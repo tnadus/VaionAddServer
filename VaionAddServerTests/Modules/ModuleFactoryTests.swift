@@ -18,7 +18,7 @@ class ModuleFactoryTests: XCTestCase {
     }
     
     func test_moduleFactory_makesLoginModule() {
-        let (vc, presenter) = ModuleFactory().makeLoginModule()
+        let (vc, presenter) = ModuleFactory().makeLoginModule(ipAddress: "127.0.0.1")
         XCTAssertTrue(vc is LoginViewController)
         XCTAssertTrue(presenter is LoginPresenter)
     }

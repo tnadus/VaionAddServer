@@ -67,7 +67,7 @@ class AddServerPresenterTests: XCTestCase {
         
         let expect = expectation(description: "onLoginScreen")
         var onLoginScreenCalled = false
-        sut.onLoginScreen = {
+        sut.onLoginScreen = { _ in
             expect.fulfill()
             onLoginScreenCalled = true
         }

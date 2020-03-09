@@ -28,8 +28,8 @@ class FlowAddServer {
         let (vc, navigator) = moduleFactory.makeAddServerModule()
         
         navigator.onSuccessScreen = navigateToSuccessScreen
-        navigator.onLoginScreen = { [weak self] in
-            self?.navigateToLoginScreen()
+        navigator.onLoginScreen = { [weak self] ipAddress in
+            self?.navigateToLoginScreen(ipAddress: ipAddress)
         }
         navigator.onError = showErrorAlert
         
@@ -42,9 +42,9 @@ class FlowAddServer {
         router.pushViewController(vc, animated: true)
     }
     
-    func navigateToLoginScreen(navCompletion: ((LoginPresenterNavigatorProtocol) -> Void)? = nil) {
+    func navigateToLoginScreen(ipAddress: String, navCompletion: ((LoginPresenterNavigatorProtocol) -> Void)? = nil) {
         
-        let (vc, navigator) = moduleFactory.makeLoginModule()
+        let (vc, navigator) = moduleFactory.makeLoginModule(ipAddress: ipAddress)
         navigator.onSuccessScreen = navigateToSuccessScreen
         router.pushViewController(vc, animated: true)
         navCompletion?(navigator)

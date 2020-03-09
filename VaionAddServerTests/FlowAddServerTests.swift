@@ -51,7 +51,7 @@ class FlowAddServerTests: XCTestCase {
         
         let expect = expectation(description: "navigatesToLoginScreen")
         sut.start { (navigator) in
-            navigator.onLoginScreen?()
+            navigator.onLoginScreen?("127.0.0.1")
             expect.fulfill()
         }
         waitForExpectations(timeout: 1.0, handler: nil)
@@ -82,7 +82,7 @@ class FlowAddServerTests: XCTestCase {
         
         let expect = expectation(description: "navigatesToSuccessScreen")
         sut.start()
-        sut.navigateToLoginScreen { (navigator) in
+        sut.navigateToLoginScreen(ipAddress: "127.0.0.1") { (navigator) in
             navigator.onSuccessScreen?()
             expect.fulfill()
         }

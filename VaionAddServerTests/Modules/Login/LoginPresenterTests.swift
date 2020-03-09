@@ -117,7 +117,8 @@ class LoginPresenterTests: XCTestCase {
 extension LoginPresenterTests {
 
     func createSUT() -> LoginPresenter {
-        let sut = LoginPresenter(addServerUsecase: addServerUsecase)
+        let sut = LoginPresenter(addServerUsecase: addServerUsecase,
+                                 ipAddress: "127.0.0.1")
         sut.managedView = loginView
         return sut
     }

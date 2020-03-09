@@ -54,6 +54,7 @@ extension AddServerViewControllerTests {
         
         var startCalledFlag = false
         var buttonOKTappedCalledFlag = false
+        var managedView: AddServerViewProtocol?
         
         func start() {
             startCalledFlag = true

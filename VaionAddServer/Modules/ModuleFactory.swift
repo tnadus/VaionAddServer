@@ -17,9 +17,10 @@ class ModuleFactory {
         return (vc, presenter)
     }
     
-    func makeLoginModule() -> (LoginViewController, LoginPresenter) {
+    func makeLoginModule(ipAddress: String) -> (LoginViewController, LoginPresenter) {
         let addServerUsecase = AddServerUsecase()
-        let presenter = LoginPresenter(addServerUsecase: addServerUsecase)
+        let presenter = LoginPresenter(addServerUsecase: addServerUsecase,
+                                       ipAddress: ipAddress)
         let vc = LoginViewController(presenter: presenter)
         return (vc, presenter)
     }

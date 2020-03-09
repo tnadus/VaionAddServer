@@ -78,6 +78,7 @@ extension LoginViewControllerTests {
         var startCalledFlag = false
         var onButtonOKTapCalledFlag = false
         var onButtonCancelTapCalledFlag = false
+        var managedView: LoginViewProtocol?
         
         func start() {
             startCalledFlag = true

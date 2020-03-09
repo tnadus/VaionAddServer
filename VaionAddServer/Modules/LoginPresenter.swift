@@ -31,6 +31,7 @@ class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
     
     //Properties
     let addServerUsecase: AddServerUsecaseProtocol
+    let ipAddress: String
     weak var managedView: LoginViewProtocol?
     
     //navigation
@@ -39,8 +40,10 @@ class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
     var onError: ((Error) -> Void)?
     var onCancelled: (() -> Void)?
     
-    init(addServerUsecase: AddServerUsecaseProtocol) {
+    init(addServerUsecase: AddServerUsecaseProtocol,
+         ipAddress: String) {
         self.addServerUsecase = addServerUsecase
+        self.ipAddress = ipAddress
     }
     
     func start() {
@@ -51,7 +54,7 @@ class LoginPresenter: LoginPresenterProtocol, LoginPresenterNavigatorProtocol {
     func onButtonOKTapped(credentials: Credentials) {
         managedView?.showSpinner()
         
-        addServerUsecase.addServer(ipAddress: "", credentials: credentials) {
+        addServerUsecase.addServer(ipAddress: self.ipAddress, credentials: credentials) {
                                     [weak self] result in
             switch result {
             case .success:

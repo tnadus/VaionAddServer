@@ -22,7 +22,7 @@ protocol AddServerPresenterProtocol {
 
 protocol AddServerPresenterNavigatorProtocol {
     var onSuccessScreen: (()-> Void)? { get set }
-    var onLoginScreen: (() -> Void)? { get set }
+    var onLoginScreen: ((String) -> Void)? { get set }
     var onError: ((Error) -> Void)? { get set }
 }
 
@@ -40,7 +40,7 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
     
     //Navigation
     var onSuccessScreen: (()-> Void)?
-    var onLoginScreen: (() -> Void)?
+    var onLoginScreen: ((String) -> Void)?
     var onError: ((Error) -> Void)?
     
     init(addServerUsecase: AddServerUsecaseProtocol) {
@@ -60,7 +60,7 @@ class AddServerPresenter: AddServerPresenterProtocol, AddServerPresenterNavigato
             case .success:
                 self?.onSuccessScreen?()
             case .login:
-                self?.onLoginScreen?()
+                self?.onLoginScreen?(ipAddress)
             case .error(let error):
                 self?.onError?(error)
             }
