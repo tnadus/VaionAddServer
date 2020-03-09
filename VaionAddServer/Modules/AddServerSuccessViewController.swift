@@ -19,7 +19,7 @@ class AddServerSuccessViewController: UIViewController {
     
     init(successInfo: AddServerSuccessInfo) {
         self.successInfo = successInfo
-        super.init(nibName: "AddServerSuccessViewController", bundle: Bundle.main)
+        super.init(nibName: String(describing: type(of: self)), bundle: .main)
     }
     
     required init?(coder aDecoder: NSCoder) {

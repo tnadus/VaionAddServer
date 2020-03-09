@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    private enum Constants {
+        static let buttonOKDimmedValue: CGFloat = 0.5
+    }
+    
     //IBOutlets
     @IBOutlet weak var textFieldUsername: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -22,7 +26,7 @@ class LoginViewController: UIViewController {
     
     init(presenter: LoginPresenterProtocol) {
         self.presenter = presenter
-        super.init(nibName: "LoginViewController", bundle: Bundle.main)
+        super.init(nibName: String(describing: type(of: self)), bundle: .main)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,12 +43,15 @@ class LoginViewController: UIViewController {
     private func updateSubviews() {
         textFieldUsername.text = ""
         textFieldPassword.text = ""
-        buttonOK.isEnabled = false
+        enableButtonOK(enabled: false, dimmed: Constants.buttonOKDimmedValue)
     }
     
     @IBAction func onTextFieldUsernameChanged(_ sender: Any) {
-        guard let text = textFieldUsername.text, text.isEmpty == false else { return }
-        buttonOK.isEnabled = true
+        if let text = textFieldUsername.text, text.isEmpty == false {
+            enableButtonOK(enabled: true)
+        } else {
+            enableButtonOK(enabled: false, dimmed: Constants.buttonOKDimmedValue)
+        }
     }
     
     @IBAction func onButtonOKTapped(_ sender: Any) {
@@ -54,6 +61,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func onButtonCancelTapped(_ sender: Any) {
         presenter.onButtonCancelTapped()
+    }
+    
+    private func enableButtonOK(enabled: Bool, dimmed: CGFloat = 1.0) {
+        buttonOK.isEnabled = enabled
+        buttonOK.alpha = dimmed
     }
 }
 
@@ -79,6 +91,7 @@ extension LoginViewController: LoginViewProtocol {
     func resetCredentials() {
         textFieldUsername.text = ""
         textFieldPassword.text = ""
+        enableButtonOK(enabled: false, dimmed: Constants.buttonOKDimmedValue)
         DispatchQueue.main.async { self.textFieldUsername.becomeFirstResponder() }
     }
 }

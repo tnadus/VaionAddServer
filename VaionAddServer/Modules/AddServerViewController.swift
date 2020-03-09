@@ -10,6 +10,10 @@ import UIKit
 
 class AddServerViewController: UIViewController {
     
+    private enum Constants {
+        static let buttonOKDimmedValue: CGFloat = 0.5
+    }
+    
     //IBOutlets
     @IBOutlet weak var textFieldIPAddress: UITextField!
     @IBOutlet weak var buttonOK: UIButton!
@@ -20,7 +24,7 @@ class AddServerViewController: UIViewController {
     
     init(presenter: AddServerPresenterProtocol) {
         self.presenter = presenter
-        super.init(nibName: "AddServerViewController", bundle: Bundle.main)
+        super.init(nibName: String(describing: type(of: self)), bundle: .main)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,20 +40,25 @@ class AddServerViewController: UIViewController {
     
     private func updateSubViews() {
         textFieldIPAddress.text = ""
-        buttonOK.isEnabled = false
+        enableButtonOK(enabled: false, dimmed: Constants.buttonOKDimmedValue)
     }
     
     @IBAction func onTextFieldChanged(_ sender: Any) {
         if let text = textFieldIPAddress.text, text.isEmpty == false {
-            buttonOK.isEnabled = true
+            enableButtonOK(enabled: true)
         } else {
-            buttonOK.isEnabled = false
+            enableButtonOK(enabled: false, dimmed: Constants.buttonOKDimmedValue)
         }
     }
     
     @IBAction func onButtonOKTapped(_ sender: Any) {
         guard let text = textFieldIPAddress.text else { return }
         presenter.onOKButtonTapped(ipAddress: text)
+    }
+    
+    private func enableButtonOK(enabled: Bool, dimmed: CGFloat = 1.0) {
+        buttonOK.isEnabled = enabled
+        buttonOK.alpha = dimmed
     }
 }
 
